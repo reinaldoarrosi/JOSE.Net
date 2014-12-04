@@ -1,4 +1,4 @@
-﻿namespace JOSE.Net.JWE
+﻿namespace JOSE.Net
 {
     public interface IJweAlgorithm
     {

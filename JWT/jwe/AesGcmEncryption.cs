@@ -1,5 +1,4 @@
 using System.Security.Cryptography;
-using JOSE.Net.JWE;
 using JOSE.Net.Exceptions;
 
 namespace JOSE.Net

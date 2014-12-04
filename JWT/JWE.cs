@@ -1,5 +1,4 @@
 ﻿using JOSE.Net.Exceptions;
-using JOSE.Net.JWE;
 using System;
 using System.Collections.Generic;
 using System.Linq;

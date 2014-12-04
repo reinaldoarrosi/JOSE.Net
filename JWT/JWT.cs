@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using JOSE.Net.JWE;
 using JOSE.Net.Exceptions;
 
 namespace JOSE.Net
