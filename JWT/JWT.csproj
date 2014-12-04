@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
@@ -41,8 +42,24 @@
   <ItemGroup>
     <Compile Include="crypto\AesGcm.cs" />
     <Compile Include="crypto\AesKeyWrap.cs" />
+    <Compile Include="crypto\IntegrityException.cs" />
     <Compile Include="crypto\RsaOaep.cs" />
+    <Compile Include="enums\JweCompression.cs" />
+    <Compile Include="enums\JweEncryption.cs" />
+    <Compile Include="enums\JweAlgorithm.cs" />
+    <Compile Include="enums\JwsAlgorithm.cs" />
+    <Compile Include="exceptions\InvalidAlgorithmException.cs" />
+    <Compile Include="exceptions\EncryptionException.cs" />
+    <Compile Include="exceptions\IntegrityException.cs" />
+    <Compile Include="exceptions\JoseDeserializationException.cs" />
+    <Compile Include="exceptions\JoseException.cs" />
+    <Compile Include="json\JSON.cs" />
+    <Compile Include="json\JSSerializerMapper.cs" />
+    <Compile Include="util\Helper.cs" />
+    <Compile Include="JOSE.cs" />
+    <Compile Include="JWE.cs" />
     <Compile Include="jwe\IJweAlgorithm.cs" />
+    <Compile Include="JWS.cs" />
     <Compile Include="util\Arrays.cs" />
     <Compile Include="util\Base64Url.cs" />
     <Compile Include="util\Compact.cs" />
@@ -59,7 +76,7 @@
     <Compile Include="Security\Cryptography\EccKey.cs" />
     <Compile Include="util\Ensure.cs" />
     <Compile Include="json\IJsonMapper.cs" />
-    <Compile Include="json\JSSerializerMapper.cs" />
+    <Compile Include="json\JSONNetOrJSSerializerMapper.cs" />
     <Compile Include="jwe\AesCbcHmacEncryption.cs" />
     <Compile Include="jwe\AesGcmEncryption.cs" />
     <Compile Include="compression\DeflateCompression.cs" />

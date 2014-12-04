@@ -1,5 +1,6 @@
 using System.Security.Cryptography;
 using Jose.jwe;
+using Jose.exceptions;
 
 namespace Jose
 {

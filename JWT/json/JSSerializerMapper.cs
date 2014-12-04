@@ -1,24 +1,26 @@
+using System;
+using System.IO;
 using System.Web.Script.Serialization;
 
 namespace Jose
 {
-    public class JSSerializerMapper:IJsonMapper
+    public class JSSerializerMapper : IJsonMapper
     {
-        private static JavaScriptSerializer js;
+        private JavaScriptSerializer js;
 
-        private JavaScriptSerializer JS
+        public JSSerializerMapper()
         {
-            get { return js ?? (js = new JavaScriptSerializer()); }
+            js = new JavaScriptSerializer();
         }
 
         public string Serialize(object obj)
         {
-            return JS.Serialize(obj);
+            return js.Serialize(obj);
         }
 
         public T Parse<T>(string json)
         {
-            return JS.Deserialize<T>(json);
+            return js.Deserialize<T>(json);
         }
     }
 }

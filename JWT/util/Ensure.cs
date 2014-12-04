@@ -6,6 +6,18 @@ namespace Jose
 {
     public class Ensure
     {
+        public static void AreEqual(object obj1, object obj2, string msg, params object[] args)
+        {
+            if (!obj1.Equals(obj2))
+                throw new ArgumentException(msg);
+        }
+
+        public static void AreNotEqual(object obj1, object obj2, string msg, params object[] args)
+        {
+            if (obj1.Equals(obj2))
+                throw new ArgumentException(msg);
+        }
+
         public static void IsEmpty(byte[] arr, string msg, params object[] args)
         {
             if(arr.Length!=0)
@@ -23,6 +35,12 @@ namespace Jose
         public static void IsNull(object key, string msg, params object[] args)
         {
             if (key != null)
+                throw new ArgumentException(msg);
+        }
+
+        public static void IsNotNull(object key, string msg, params object[] args)
+        {
+            if (key == null)
                 throw new ArgumentException(msg);
         }
 

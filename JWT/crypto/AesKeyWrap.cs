@@ -1,3 +1,4 @@
+using Jose.exceptions;
 using System.IO;
 using System.Security.Cryptography;
 
