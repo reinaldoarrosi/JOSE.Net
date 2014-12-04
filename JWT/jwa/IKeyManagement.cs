@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Jose
+namespace JOSE.Net
 {
     public interface IKeyManagement
     {

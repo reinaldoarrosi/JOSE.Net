@@ -1,7 +1,7 @@
 using System;
 using System.Security.Cryptography;
 using System.Text;
-using Jose;
+using JOSE.Net;
 using NUnit.Framework;
 using Security.Cryptography;
 

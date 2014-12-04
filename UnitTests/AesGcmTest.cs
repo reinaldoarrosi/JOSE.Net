@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
-using Jose;
+using JOSE.Net;
 using NUnit.Framework;
 
 namespace UnitTests

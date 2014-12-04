@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace Jose.native
+namespace JOSE.Net.Native
 {
     public static class BCrypt
     {

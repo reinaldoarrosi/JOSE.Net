@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace Jose
+namespace JOSE.Net
 {
     public class Compact
     {

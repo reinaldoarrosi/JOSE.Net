@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A80B51B8-DDF6-4026-98A4-B59653E50B38}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JOSE.Net</RootNamespace>
+    <AssemblyName>JOSE.Net</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cryptography\AesGcm.cs" />
+    <Compile Include="Cryptography\AesKeyWrap.cs" />
+    <Compile Include="Cryptography\RsaOaep.cs" />
+    <Compile Include="Enums\JweCompression.cs" />
+    <Compile Include="Enums\JweEncryption.cs" />
+    <Compile Include="Enums\JweAlgorithm.cs" />
+    <Compile Include="Enums\JwsAlgorithm.cs" />
+    <Compile Include="Exceptions\InvalidAlgorithmException.cs" />
+    <Compile Include="Exceptions\EncryptionException.cs" />
+    <Compile Include="Exceptions\IntegrityException.cs" />
+    <Compile Include="Exceptions\JoseDeserializationException.cs" />
+    <Compile Include="Exceptions\JoseException.cs" />
+    <Compile Include="JSON\JSON.cs" />
+    <Compile Include="JSON\JSSerializerMapper.cs" />
+    <Compile Include="Util\Helper.cs" />
+    <Compile Include="JOSE.cs" />
+    <Compile Include="JWE.cs" />
+    <Compile Include="JWE\IJweAlgorithm.cs" />
+    <Compile Include="JWS.cs" />
+    <Compile Include="Util\Arrays.cs" />
+    <Compile Include="Util\Base64Url.cs" />
+    <Compile Include="Util\Compact.cs" />
+    <Compile Include="Cryptography\ConcatKDF.cs" />
+    <Compile Include="JWA\AesGcmKeyWrapManagement.cs" />
+    <Compile Include="JWA\AesKeyWrapManagement.cs" />
+    <Compile Include="JWA\EcdhKeyManagement.cs" />
+    <Compile Include="JWA\EcdhKeyManagementWithAesKeyWrap.cs" />
+    <Compile Include="JWA\Pbse2HmacShaKeyManagementWithAesKeyWrap.cs" />
+    <Compile Include="Native\BCrypt.cs" />
+    <Compile Include="Native\NCrypt.cs" />
+    <Compile Include="Cryptography\PBKDF2.cs" />
+    <Compile Include="Cryptography\RsaPss.cs" />
+    <Compile Include="Security\Cryptography\EccKey.cs" />
+    <Compile Include="Util\Ensure.cs" />
+    <Compile Include="JSON\IJsonMapper.cs" />
+    <Compile Include="JSON\JSONNetOrJSSerializerMapper.cs" />
+    <Compile Include="JWE\AesCbcHmacEncryption.cs" />
+    <Compile Include="JWE\AesGcmEncryption.cs" />
+    <Compile Include="Compression\DeflateCompression.cs" />
+    <Compile Include="JWA\DirectKeyManagement.cs" />
+    <Compile Include="Compression\ICompression.cs" />
+    <Compile Include="JWA\IKeyManagement.cs" />
+    <Compile Include="JWA\RsaKeyManagement.cs" />
+    <Compile Include="JWS\EcdsaUsingSha.cs" />
+    <Compile Include="JWS\HmacUsingSha.cs" />
+    <Compile Include="JWS\IJwsAlgorithm.cs" />
+    <Compile Include="JWS\Plaintext.cs" />
+    <Compile Include="JWS\RsaPssUsingSha.cs" />
+    <Compile Include="JWS\RsaUsingSha.cs" />
+    <Compile Include="JWT.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\Cryptography\RsaKey.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

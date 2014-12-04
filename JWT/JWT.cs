@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Jose.jwe;
-using Jose.exceptions;
+using JOSE.Net.JWE;
+using JOSE.Net.Exceptions;
 
-namespace Jose
+namespace JOSE.Net
 {
     /// <summary>
     /// Provides methods for encoding and decoding JSON Web Tokens.

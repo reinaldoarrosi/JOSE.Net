@@ -1,9 +1,9 @@
 using System;
 using System.Security.Cryptography;
 using Security.Cryptography;
-using Jose.exceptions;
+using JOSE.Net.Exceptions;
 
-namespace Jose
+namespace JOSE.Net
 {
     public class RsaPssUsingSha : IJwsAlgorithm
     {

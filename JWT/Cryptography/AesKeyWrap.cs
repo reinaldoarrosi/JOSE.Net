@@ -1,8 +1,8 @@
-using Jose.exceptions;
+using JOSE.Net.Exceptions;
 using System.IO;
 using System.Security.Cryptography;
 
-namespace Jose
+namespace JOSE.Net
 {
     public static class AesKeyWrap
     {

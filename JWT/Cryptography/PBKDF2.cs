@@ -1,7 +1,7 @@
 using System;
 using System.Security.Cryptography;
 
-namespace Jose
+namespace JOSE.Net
 {
     public static class PBKDF2
     {

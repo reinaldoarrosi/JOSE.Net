@@ -1,9 +1,9 @@
 using System.IO;
 using System.Security.Cryptography;
-using Jose.jwe;
-using Jose.exceptions;
+using JOSE.Net.JWE;
+using JOSE.Net.Exceptions;
 
-namespace Jose
+namespace JOSE.Net
 {
     public class AesCbcHmacEncryption : IJweAlgorithm
     {

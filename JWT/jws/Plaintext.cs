@@ -1,4 +1,4 @@
-namespace Jose
+namespace JOSE.Net
 {
     public class Plaintext:IJwsAlgorithm
     {

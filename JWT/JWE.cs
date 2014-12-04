@@ -1,11 +1,11 @@
-﻿using Jose.exceptions;
-using Jose.jwe;
+﻿using JOSE.Net.Exceptions;
+using JOSE.Net.JWE;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Jose
+namespace JOSE.Net
 {
     public class JWE
     {

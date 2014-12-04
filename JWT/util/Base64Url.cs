@@ -1,6 +1,6 @@
 using System;
 
-namespace Jose
+namespace JOSE.Net
 {
     public static class Base64Url
     {

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Jose
+namespace JOSE.Net
 {
     public class EcdhKeyManagementWithAesKeyWrap : EcdhKeyManagement
     {

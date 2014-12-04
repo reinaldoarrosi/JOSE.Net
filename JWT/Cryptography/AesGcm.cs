@@ -2,9 +2,9 @@ using System;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
-using Jose.native;
+using JOSE.Net.Native;
 
-namespace Jose
+namespace JOSE.Net
 {
     public static class AesGcm
     {

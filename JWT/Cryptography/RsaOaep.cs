@@ -1,8 +1,8 @@
 using System;
 using System.Security.Cryptography;
-using Jose.native;
+using JOSE.Net.Native;
 
-namespace Jose
+namespace JOSE.Net
 {
     public static class RsaOaep
     {

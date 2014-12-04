@@ -1,4 +1,4 @@
-using Jose;
+using JOSE.Net;
 using NUnit.Framework;
 
 namespace UnitTests

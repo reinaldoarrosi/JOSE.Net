@@ -1,10 +1,10 @@
-﻿using Jose.exceptions;
+﻿using JOSE.Net.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Jose
+namespace JOSE.Net
 {
     public static class Helper
     {

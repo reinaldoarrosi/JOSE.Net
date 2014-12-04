@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Web.Script.Serialization;
 
-namespace Jose
+namespace JOSE.Net
 {
     public class JSSerializerMapper : IJsonMapper
     {

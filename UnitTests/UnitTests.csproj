@@ -55,9 +55,9 @@
     <Compile Include="TestSuite.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JWT\JWT.csproj">
+    <ProjectReference Include="..\JWT\JOSE.Net.csproj">
       <Project>{A80B51B8-DDF6-4026-98A4-B59653E50B38}</Project>
-      <Name>JWT</Name>
+      <Name>JOSE.Net</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

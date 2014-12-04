@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using Security.Cryptography;
 
-namespace Jose
+namespace JOSE.Net
 {
     public class RsaKeyManagement:IKeyManagement
     {        

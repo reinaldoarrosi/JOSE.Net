@@ -1,4 +1,4 @@
-namespace Jose
+namespace JOSE.Net
 {
     public interface ICompression
     {

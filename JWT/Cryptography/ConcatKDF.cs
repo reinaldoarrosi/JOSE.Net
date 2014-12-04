@@ -1,8 +1,8 @@
 using System.Security.Cryptography;
-using Jose.native;
+using JOSE.Net.Native;
 using Microsoft.Win32.SafeHandles;
 
-namespace Jose
+namespace JOSE.Net
 {
     public class ConcatKDF
     {
