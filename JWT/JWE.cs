@@ -47,7 +47,21 @@ namespace JOSE.Net
         }; 
         #endregion
 
-        public static JOSE Deserialize(string token, object encryptionKey)
+        public static bool TryDeserialize(out JOSEObject jose, string token, object encryptionKey)
+        {
+            try
+            {
+                jose = Deserialize(token, encryptionKey);
+                return true;
+            }
+            catch
+            {
+                jose = null;
+                return false;
+            }
+        }
+
+        public static JOSEObject Deserialize(string token, object encryptionKey)
         {
             Ensure.IsNotEmpty(token, "Incoming token expected to be in compact serialization form, not empty, whitespace or null.");
             Ensure.IsNotNull(encryptionKey, "EncryptionKey expected to be not null");
@@ -77,7 +91,7 @@ namespace JOSE.Net
 
             string payloadStr = Encoding.UTF8.GetString(plainText);
 
-            return new JOSE(headerStr, payloadStr, signature);
+            return new JOSEObject(headerStr, payloadStr, signature);
         }
 
         public JweAlgorithm Algorithm { get; private set; }

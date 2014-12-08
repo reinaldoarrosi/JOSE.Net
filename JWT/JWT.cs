@@ -10,9 +10,23 @@ namespace JOSE.Net
     /// </summary>
     public class JWT
     {
-        public static JOSE Deserialize(string token, object signingKey = null, object encryptionKey = null)
+        public static bool TryDeserialize(out JOSEObject jose, string token, object signingKey = null, object encryptionKey = null)
         {
-            JOSE jose;
+            try
+            {
+                jose = Deserialize(token, signingKey, encryptionKey);
+                return true;
+            }
+            catch
+            {
+                jose = null;
+                return false;
+            }
+        }
+
+        public static JOSEObject Deserialize(string token, object signingKey = null, object encryptionKey = null)
+        {
+            JOSEObject jose;
 
             try
             {
@@ -127,7 +141,7 @@ namespace JOSE.Net
 
             JWS jws = ConvertToJWS(jwe);
             jws.Headers["typ"] = "JWT";
-            jwe.Headers["cty"] = "JWT";
+            jws.Headers["cty"] = "JWT";
 
             return jws.Serialize();
         }
@@ -138,7 +152,7 @@ namespace JOSE.Net
             jws.Headers["typ"] = "JWT";
 
             JWE jwe = ConvertToJWE(jws);
-            jws.Headers["typ"] = "JWT";
+            jwe.Headers["typ"] = "JWT";
             jwe.Headers["cty"] = "JWT";
 
             return jwe.Serialize();

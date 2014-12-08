@@ -55,7 +55,7 @@
     <Compile Include="JSON\JSON.cs" />
     <Compile Include="JSON\JSSerializerMapper.cs" />
     <Compile Include="Util\Helper.cs" />
-    <Compile Include="JOSE.cs" />
+    <Compile Include="JOSEObject.cs" />
     <Compile Include="JWE.cs" />
     <Compile Include="JWE\IJweAlgorithm.cs" />
     <Compile Include="JWS.cs" />
