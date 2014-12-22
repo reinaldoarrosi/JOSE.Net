@@ -158,6 +158,46 @@ namespace JOSE.Net
             return jwe.Serialize();
         }
 
+        public string Token()
+        {
+            JWE jwe;
+            JWS jws;
+
+            try
+            {
+                jwe = ConvertToJWE();
+                jwe.Headers["typ"] = "JWT";
+            }
+            catch
+            {
+                jwe = null;
+            }
+
+            try
+            {
+                if (jwe != null)
+                {
+                    jws = ConvertToJWS(jwe);
+                    jws.Headers["cty"] = "JWT";
+                    jws.Headers["typ"] = "JWT";
+                }
+                else
+                {
+                    jws = ConvertToJWS();
+                    jws.Headers["typ"] = "JWT";
+                }
+
+                return jws.Serialize();
+            }
+            catch
+            {
+                if (jwe != null)
+                    return jwe.Serialize();
+                else
+                    return null;
+            }
+        }
+
         public JWS ConvertToJWS()
         {
             return ConvertToJWS(SerializeClaimSet());
